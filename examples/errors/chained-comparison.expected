@@ -1,0 +1,6 @@
+error: comparisons cannot be chained
+ --> examples/errors/chained-comparison.rule:1:20
+  |
+1 | 18 <= customer.age < 65
+  |                    ^ second comparison
+  = hint: join them with `and`, for example `a < b and b < c`

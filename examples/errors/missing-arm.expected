@@ -1,0 +1,6 @@
+error: match is not exhaustive: missing "bronze"
+ --> examples/errors/missing-arm.rule:1:1
+  |
+1 | match customer.tier { "gold" => 0.9, "silver" => 0.95 }
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not every case is handled
+  = hint: add `"bronze" => ...` or a final `_ => ...`

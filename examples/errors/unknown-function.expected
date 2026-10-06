@@ -1,0 +1,6 @@
+error: unknown function `mni`
+ --> examples/errors/unknown-function.rule:1:1
+  |
+1 | mni(price, 100)
+  | ^^^ not a builtin
+  = hint: did you mean `min`?

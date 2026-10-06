@@ -1,0 +1,6 @@
+error: the branches of `if` have different types: text and number
+ --> examples/errors/branches-differ.rule:1:35
+  |
+1 | if quantity > 10 then "bulk" else price
+  |                                   ^^^^^ this is number
+  = hint: the `then` branch is text

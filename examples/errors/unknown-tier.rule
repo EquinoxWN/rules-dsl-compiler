@@ -1,0 +1,1 @@
+if customer.tier == "platnum" then price * 0.8 else price

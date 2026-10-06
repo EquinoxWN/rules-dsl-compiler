@@ -1,0 +1,5 @@
+error: "platnum" is not a valid tier
+ --> examples/errors/unknown-tier.rule:1:21
+  |
+1 | if customer.tier == "platnum" then price * 0.8 else price
+  |                     ^^^^^^^^^ expected one of "gold", "silver", "bronze"

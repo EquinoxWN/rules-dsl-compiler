@@ -1,0 +1,1 @@
+if customer.newsletter then price * 0.98

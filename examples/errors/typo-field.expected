@@ -1,0 +1,6 @@
+error: unknown field `tir`
+ --> examples/errors/typo-field.rule:1:18
+  |
+1 | price * customer.tir
+  |                  ^^^ not a field of record { tier, age, country, newsletter }
+  = hint: did you mean `tier`?

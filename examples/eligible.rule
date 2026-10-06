@@ -1,0 +1,4 @@
+# Adults in the Benelux, except bronze customers placing bulk orders.
+customer.age >= 18
+  and customer.country in ["NL", "BE", "LU"]
+  and not (customer.tier == "bronze" and quantity > 10)

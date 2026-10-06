@@ -1,0 +1,1 @@
+match customer.tier { "gold" => 0.9, "silver" => 0.95 }

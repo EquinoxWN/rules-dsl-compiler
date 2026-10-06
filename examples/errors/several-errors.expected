@@ -1,0 +1,20 @@
+error: the condition of `if` must be bool, found number
+ --> examples/errors/several-errors.rule:1:4
+  |
+1 | if customer.age then pric * 2 else upper(price)
+  |    ^^^^^^^^^^^^ this is number
+  = hint: compare it, for example `quantity > 10`
+
+error: unknown name `pric`
+ --> examples/errors/several-errors.rule:1:22
+  |
+1 | if customer.age then pric * 2 else upper(price)
+  |                      ^^^^ not an input or a `let` name
+  = hint: did you mean `price`?
+
+error: argument 1 of `upper` must be text, found number
+ --> examples/errors/several-errors.rule:1:42
+  |
+1 | if customer.age then pric * 2 else upper(price)
+  |                                          ^^^^^ this is number
+  = hint: usage: upper(text)

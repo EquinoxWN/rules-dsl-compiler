@@ -1,0 +1,6 @@
+error: unterminated text
+ --> examples/errors/unterminated-text.rule:1:21
+  |
+1 | customer.country == "NL
+  |                     ^^^ this text has no closing `"`
+  = hint: text must end with `"` on the same line

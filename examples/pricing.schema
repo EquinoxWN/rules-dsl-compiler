@@ -1,0 +1,9 @@
+# Inputs that pricing and eligibility rules may read, with their types.
+price: number
+quantity: number
+customer: {
+  tier: enum("gold", "silver", "bronze"),
+  age: number,
+  country: text,
+  newsletter: bool
+}

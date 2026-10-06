@@ -1,0 +1,8 @@
+# Discount by tier, capped at 50 off the order, never below zero.
+let rate = match customer.tier {
+  "gold" => 0.10,
+  "silver" => 0.05,
+  "bronze" => 0,
+};
+let discount = min(price * quantity * rate, 50);
+max(price * quantity - discount, 0)

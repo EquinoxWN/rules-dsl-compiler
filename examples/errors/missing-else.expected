@@ -1,0 +1,6 @@
+error: `if` without `else` has no value when the condition is false
+ --> examples/errors/missing-else.rule:1:1
+  |
+1 | if customer.newsletter then price * 0.98
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ missing `else`
+  = hint: add an `else` branch, for example `else price`

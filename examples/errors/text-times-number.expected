@@ -1,0 +1,5 @@
+error: cannot multiply text by number
+ --> examples/errors/text-times-number.rule:1:1
+  |
+1 | customer.tier * 2
+  | ^^^^^^^^^^^^^ this is text (tier: "gold" | "silver" | "bronze")

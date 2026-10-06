@@ -1,0 +1,5 @@
+error: this rule must produce number, found bool
+ --> examples/errors/wrong-result-type.rule:1:1
+  |
+1 | customer.age >= 18
+  | ^^^^^^^^^^^^^^^^^^ this is bool
