@@ -49,6 +49,12 @@ _Steps 1 and 2 are built and tested (M1); the rest is on the [roadmap](#roadmap)
 5. An LSP server gives editors live errors and autocomplete, so non-engineers can write rules without breaking production.
 6. Snapshot tests pin parser and compiler output, and a fuzzing campaign feeds random programs to prove the VM never panics.
 
+## Who it helps
+
+- **Who:** Teams whose pricing or eligibility rules change often, and the people who write them.
+- **The problem:** A mistake in a rule is usually found in production, one error at a time.
+- **How to use it:** Write rules in the small typed language; the parser and type checker report every mistake at once, with its exact position and a hint, before the rule ships.
+
 ## Tech stack
 
 | Area | In M1 | Planned |
