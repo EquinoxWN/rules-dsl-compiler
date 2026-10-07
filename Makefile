@@ -1,3 +1,6 @@
+# OSV-Scanner (https://google.github.io/osv-scanner/) checks every resolved Maven dependency.
+OSV ?= osv-scanner
+
 .PHONY: setup lint test demo bench audit ci
 
 # MVNLOCAL (set by the author's repoenv helper) keeps the Maven repository inside the repo; empty in CI.
@@ -26,8 +29,9 @@ demo: lint
 bench:
 	@echo "M3: tree-walking interpreter vs bytecode VM throughput, and fuzzing hours with zero crashes"
 
-# Java dependencies (JUnit only, test scope) are watched by Dependabot alerts.
+# Known vulnerabilities in every resolved Maven dependency, test scope included.
 audit:
-	@echo "Java dependencies: Dependabot alerts and weekly update PRs; JUnit is the only dependency (test scope)"
+	mvn -B -q org.cyclonedx:cyclonedx-maven-plugin:2.9.3:makeAggregateBom -DoutputFormat=json -DoutputName=bom -DincludeTestScope=true
+	$(OSV) scan source -L target/bom.json
 
 ci: setup lint test demo
